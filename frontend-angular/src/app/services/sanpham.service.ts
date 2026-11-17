@@ -4,7 +4,7 @@ import { Observable, of, catchError } from 'rxjs';
 import { SanPham } from '../models/sanpham';
 
 @Injectable({ providedIn: 'root' })
-export class SanphamService {
+export class  SanphamService {
   private api = 'http://localhost:5000/api/sanpham';
   private duLieuMau: SanPham[] = [
   ];
@@ -12,7 +12,7 @@ export class SanphamService {
   constructor(private http: HttpClient) { }
 
   layTatCa(): Observable<SanPham[]> {
-    return this.http.get<SanPham[]>(this.api).pipe(catchError(() => of(this.duLieuMau)));
+    return this.http.get<SanPham[]>(this.api) .pipe(catchError(() => of(this.duLieuMau)));
   }
 
   layTheoId(id: number): Observable<SanPham | undefined> {

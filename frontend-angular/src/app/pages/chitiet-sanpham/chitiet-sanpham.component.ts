@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class ChitietSanphamComponent {
   sanpham?: SanPham;
-
+// lấy giá trị id từ URL  
   constructor(
     route: ActivatedRoute,
     private sanphamService: SanphamService,

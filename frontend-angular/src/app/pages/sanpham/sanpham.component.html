@@ -29,9 +29,10 @@
   </div>
 
   <div
+   /* Nếu có sản phẩm thì hiển thị danh sách.Ngược lại Không tìm thấy sản phẩm phù hợp. */
     *ngIf="danhSachLoc.length > 0; else khongCo"
     class="luoi-san-pham">
-
+       <!-- hiển thị sanh sách sản phẩm -->
     <app-the-san-pham
       *ngFor="let sp of danhSachLoc"
       [sanpham]="sp">

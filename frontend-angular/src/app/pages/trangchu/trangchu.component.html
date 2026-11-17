@@ -32,7 +32,7 @@
   <div class="hop-logo">SPALDING</div>
   <div class="hop-logo">ĐỘNG LỰC</div>
 </section>
-
+<!-- dùng để hiển thị các nhóm sản phẩm. -->
 <section class="khung khoi-loai-san-pham" *ngFor="let nhom of cacNhomSanPham">
 
   <div class="banner-nhom-san-pham" *ngIf="nhom.banner" [id]="nhom.id">
@@ -44,10 +44,10 @@
       <p>{{ nhom.phuDe }}</p>
       <h2>{{ nhom.tenHienThi }}</h2>
     </div>
-
+    
     <a routerLink="/san-pham">Xem tất cả</a>
   </div>
-
+<!-- dùng để hiển thị các sản phẩm thuộc từng nhóm dòng *Ngfor-->
   <div class="thanh-truot-san-pham">
     <app-the-san-pham
       *ngFor="let sp of nhom.danhSach"
